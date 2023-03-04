@@ -13,12 +13,13 @@ def bmi(weight, height):
 print("--Welcome to BMI Calculator--")
 print("[1] Start")
 print("[2] Exit")
+
 user_choice = int(input("Enter (1/2): "))
-while user_choice == 1 and user_choice != 2:
+while user_choice == 1:
     try:
         weight = int(input("[Kg] Enter your weight: "))
         height = int(input("[Cm]Enter your height: "))
         print("BMI Results:", bmi(weight, height))
         break
-    except ValueError:
+    except:
         print("Enter a valid value!")
